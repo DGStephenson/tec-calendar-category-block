@@ -1,0 +1,24 @@
+{
+  "apiVersion": 2,
+  "name": "tec-category-selector/events-list",
+  "title": "Events by Category",
+  "category": "widgets",
+  "icon": "calendar",
+  "description": "Display events from The Events Calendar filtered by selected categories",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "tec-category-selector",
+  "editorScript": "file:./build/index.js",
+  "style": "file:./my-events-calendar-block.css",
+  "attributes": {
+    "selectedCategories": {
+      "type": "array",
+      "default": []
+    },
+    "numberOfEvents": {
+      "type": "number",
+      "default": 5
+    }
+  }
+}

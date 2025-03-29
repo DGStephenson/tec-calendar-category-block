@@ -1,0 +1,124 @@
+/**
+ * TEC Category Selector Block - Default Stylesheet
+ * Version: 1.0.0
+ * Date: 2025-03-28
+ * Author: Dan Stephenson
+ */
+
+/* Main container */
+.tec-category-events-list {
+    margin: 2rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+}
+
+/* Individual event items */
+.tec-event-item {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #141827; /* The Events Calendar default dark color */
+    background-color: #fafafa;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tec-event-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tec-event-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Event title styling */
+.tec-event-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.tec-event-title a {
+    color: #141827;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tec-event-title a:hover {
+    color: #5d5d5d;
+    text-decoration: underline;
+}
+
+/* Event date styling */
+.tec-event-date {
+    font-size: 0.875rem;
+    color: #5d5d5d;
+    display: flex;
+    align-items: center;
+}
+
+.tec-event-date::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235d5d5d'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5zm2 4h10v2H7v-2zm0 4h7v2H7v-2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* No events message */
+.tec-no-events {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #5d5d5d;
+    background-color: #fafafa;
+    border-radius: 4px;
+    border: 1px dashed #e0e0e0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .tec-event-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tec-event-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Block editor specific styles */
+.editor-styles-wrapper .tec-category-events-list {
+    background-color: transparent;
+}
+
+.tec-category-selector-preview {
+    margin-top: 1rem;
+}
+
+/* Category selection in editor */
+.tec-categories-list {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0.5rem;
+    background-color: #f6f7f7;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+.tec-categories-list .components-checkbox-control {
+    margin-bottom: 0.5rem;
+}
+
+/* Loading spinner container */
+.tec-category-selector .components-spinner {
+    margin: 1rem auto;
+    display: block;
+}

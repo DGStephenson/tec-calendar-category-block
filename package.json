@@ -1,0 +1,15 @@
+{
+  "name": "tec-category-selector-block",
+  "version": "1.0.0",
+  "description": "A Gutenberg block for The Events Calendar to display events from selected categories",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "author": "Dan Stephenson",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "@wordpress/scripts": "^23.3.0"
+  }
+}
